@@ -9,7 +9,7 @@ Somos um [SaaS (Software as a service)](https://pt.wikipedia.org/wiki/Software_c
 Entregamos **controle**, **organização** e **melhor relacionamento com o cliente** para empresas de Viagens, Auto, Saúde, Funeral e também Residencial.
 
 <p>
-  <img src="assets/notro.jpeg" width="855"/>
+  <img src="assets/notro.jpg" width="855"/>
 </p>
 
 Origem
