@@ -23,10 +23,10 @@ Condições
 ----------
 - Período: Integral
 - Onde: Qualquer lugar :)
+----------
 
 A empresa não possui hierarquias e você é convidado e desafiado a colaborar com todas as frentes de trabalho. Ou seja, aqui todas sugestões são bem vindas!
 Oportunidade
-----------
 
 Estamos em busca de desenvolvedores **Frontend** FODAS e APAIXONADOS para fazer parte do nosso time de produto.
 
