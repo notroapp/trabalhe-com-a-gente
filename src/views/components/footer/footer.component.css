@@ -1,0 +1,152 @@
+footer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 50px 40px 25px 40px;
+    background: var(--background-tertiary-color);
+}
+
+footer .footer-container {
+    display: block;
+    position: relative;
+}
+
+footer .footer-container .footer-container-about {
+    width: 100%;
+}
+
+footer .footer-container .footer-container-about h1 {
+    font-size: 35px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+footer .footer-container .footer-container-about p {
+    margin-top: 7px;
+    color: #ffffff;
+}
+
+footer .footer-container .footer-container-about p a {
+    cursor: pointer;
+    color: #ffffff;
+    font-weight: 300;
+    font-style: normal;
+    transition: all 0.5s ease-in-out;
+}
+
+footer .footer-container .footer-container-about p a:hover {
+    color: #ffffff;
+}
+
+footer .footer-container-btn {
+    display: grid;
+    padding: 30px 0 0 0;
+    align-items: center;
+    grid-column-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer .footer-container-btn .btn-primary {
+    width: 100%;
+    margin: 10px 0 0 0;
+    color: var(--text-primary-color);
+    background: var(--background-quaternary-color);
+    border: 3px solid var(--background-quaternary-color);
+}
+
+footer .footer-container-btn .btn-primary:hover {
+    color: var(--text-second-color);
+    background: var(--background-tertiary-color);
+}
+
+.copyrightText {
+    flex: none;
+    width: 100%;
+    display: flex;
+    font-size: 19px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    font-weight: 400;
+    position: relative;
+    text-align: center;
+    flex-direction: column;
+    padding: 25px 100px 25px 100px;
+    color: var(--text-primary-color);
+    background: var(--background-quaternary-color);
+}
+
+@media (max-width: 991px) {
+    .footer-container-img{
+        height: 300px;
+    }
+
+    footer {
+        padding: 50px 20px 40px 20px;
+    }
+
+    footer .footer-container {
+        display: block;
+    }
+
+    footer .footer-container .footer-container-about {
+        width: 100%;
+    }
+
+    footer .footer-container-btn {
+        padding-top: 20px;
+    }
+
+    .copyrightText {
+        padding: 25px ;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 850px) {
+    .footer-container-img{
+        height: 250px;
+    }
+    
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .footer-container-img{
+        height: 120px;
+    }
+
+    .footer {
+        padding: 50px 10px 40px 10px
+    }
+
+    footer .footer-container-btn {
+        display: block;
+    }
+
+    footer .footer-container .footer-container-about {
+        overflow: hidden;
+    }
+
+    .copyrightText {
+        padding: 25px;
+    }
+
+}
+
+@media only screen and (min-device-width: 480px) and (max-device-width: 800px) {
+    footer {
+        padding: 50px 10px 40px 10px;
+    }
+
+    footer .footer-container-btn {
+        grid-column-gap: 10px;
+    }
+
+    footer .footer-container .footer-container-btn .btn {
+        margin-top: 10px;
+    }
+
+    .copyrightText {
+        padding: 25px;
+    }
+
+}

@@ -1,0 +1,85 @@
+.introduction-home {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: var(--background-primary-color);
+}
+
+.introduction-home .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 40px 0px 40px;
+}
+
+.introduction-home .container .introduction-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.introduction-home .container .introduction-text .container-img {
+    width: auto;
+    height: 100px;
+    position: relative;
+}
+
+.introduction-home .container .introduction-text .container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.introduction-home .container .introduction-search {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.introduction-home .container .introduction-search .btn-second {
+    width: 100%;
+}
+
+.introduction-home .container .introduction-text-challenge {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.introduction-home .container .introduction-text-challenge .container-img {
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+.introduction-home .container .introduction-text-challenge .container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 991px) {
+    .introduction-home .container {
+        padding: 0px 20px 0px 20px;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .introduction-home .container {
+        padding: 0px 10px 0px 10px;
+    }
+
+    .introduction-home .container .introduction-text {
+        display: block;
+        text-align: center;
+    }
+}
