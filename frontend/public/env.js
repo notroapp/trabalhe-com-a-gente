@@ -1,0 +1,1 @@
+globalThis.__env = { FRONTEND_GRAPHQL_URL: "http://localhost:4000/graphql" };

@@ -1,0 +1,56 @@
+schema {
+  query: Query
+}
+
+type Query {
+  searchRepositories(input: SearchRepositoriesInput!): SearchRepositoriesPayload!
+}
+
+input SearchRepositoriesInput {
+  query: String!
+  page: Int = 1
+  perPage: Int = 10
+  sort: RepositorySort = BEST_MATCH
+}
+
+enum RepositorySort {
+  BEST_MATCH
+}
+
+type SearchRepositoriesPayload {
+  items: [RepositorySummary!]!
+  pagination: PaginationMetadata!
+  source: ResponseSource!
+  error: ApiError
+}
+
+enum ResponseSource {
+  LIVE
+  CACHE
+}
+
+type RepositorySummary {
+  id: ID!
+  name: String!
+  url: String!
+  description: String
+  watchersCount: Int!
+  starsCount: Int!
+  openIssuesCount: Int!
+  ownerLogin: String!
+}
+
+type PaginationMetadata {
+  page: Int!
+  perPage: Int!
+  totalCount: Int!
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+}
+
+type ApiError {
+  code: String!
+  message: String!
+  retryable: Boolean!
+  details: String
+}

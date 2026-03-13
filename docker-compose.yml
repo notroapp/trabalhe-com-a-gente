@@ -1,0 +1,23 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: notro-backend
+    environment:
+      PORT: ${BACKEND_PORT:-4000}
+      GITHUB_TOKEN: ${GITHUB_TOKEN:-}
+    ports:
+      - "${BACKEND_PORT:-4000}:${BACKEND_PORT:-4000}"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        FRONTEND_GRAPHQL_URL: /graphql
+    container_name: notro-frontend
+    depends_on:
+      - backend
+    ports:
+      - "4200:80"

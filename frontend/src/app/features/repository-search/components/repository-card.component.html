@@ -1,0 +1,16 @@
+<mat-card class="repo-card">
+  <mat-card-title>
+    <a class="repo-title-link" [attr.href]="safeUrl" target="_blank" rel="noopener noreferrer">
+      {{ repository.ownerLogin }}/{{ repository.name }}
+    </a>
+  </mat-card-title>
+  <mat-card-content>
+    <p class="repo-description">{{ descriptionText }}</p>
+    <div class="repo-meta">
+      <span class="repo-pill">Stars {{ repository.starsCount | number }}</span>
+      <span class="repo-pill">Watchers {{ repository.watchersCount | number }}</span>
+      <span class="repo-pill">Issues {{ repository.openIssuesCount | number }}</span>
+    </div>
+    <a class="repo-link" [attr.href]="safeUrl" target="_blank" rel="noopener noreferrer">Abrir no GitHub</a>
+  </mat-card-content>
+</mat-card>

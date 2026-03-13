@@ -1,6 +1,125 @@
 👨‍💻 Vaga para apaixonados por criação de software
 ===========================================
 
+## Solucao implementada (Angular + Node GraphQL)
+
+Este repositorio contem uma implementacao fullstack do desafio:
+
+- `frontend/`: Angular 18+ SPA com Angular Material e RxJS
+- `backend/`: Node.js + GraphQL Yoga como BFF para GitHub Search API
+- `docker-compose.yml`: sobe frontend e backend juntos
+
+### Requisitos
+
+- Node.js 22+
+- npm 10+
+- Docker + Docker Compose (opcional, para ambiente containerizado)
+
+### Variaveis de ambiente
+
+Use `.env.example` na raiz como referencia:
+
+- `BACKEND_PORT` (padrao: `4000`)
+- `GITHUB_TOKEN` (opcional, recomendado para maior limite da API GitHub)
+- `FRONTEND_GRAPHQL_URL` (padrao local: `http://localhost:4000/graphql`)
+- `NODE_ENV` (`development` local, `production` para desabilitar GraphiQL)
+- `CORS_ORIGIN` (origem permitida para CORS no backend)
+
+### Rodar localmente (sem Docker)
+
+1) Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+2) Frontend (novo terminal)
+
+```bash
+cd frontend
+npm install
+npm run start
+```
+
+3) Acesso
+
+- Frontend: `http://localhost:4200`
+- Backend GraphQL: `http://localhost:4000/graphql`
+
+### Testes
+
+Backend:
+
+```bash
+cd backend
+npm run test
+npm run smoke
+```
+
+Frontend:
+
+```bash
+cd frontend
+npm run test:unit
+npm run smoke
+```
+
+### Rodar com Docker Compose
+
+Na raiz do projeto:
+
+```bash
+docker compose up -d --build
+```
+
+Acesso:
+
+- Frontend: `http://localhost:4200`
+- Backend GraphQL: `http://localhost:4000/graphql`
+
+### Recursos da busca
+
+O frontend suporta busca por tipo via filtros na tela de resultados:
+
+- `Repositories`
+- `Code`
+- `Commits`
+- `Issues and Pull Requests`
+- `Labels` (use `repoId:123456` na query)
+- `Topics`
+- `Users`
+
+Para os modos `Code` e `Commits`, recomenda-se configurar `GITHUB_TOKEN` no backend para reduzir limites da API.
+
+### Validacao final (quickstart)
+
+Validado neste repositorio com os seguintes comandos:
+
+```bash
+# backend
+cd backend && npm run smoke
+
+# frontend
+cd frontend && npm run smoke
+
+# docker compose
+cd .. && docker compose config
+```
+
+Todos os comandos acima executaram com sucesso.
+
+### Deploy (diferencial)
+
+O projeto esta pronto para containerizacao e deploy em qualquer plataforma com suporte a Docker.
+
+- Backend: expose porta `BACKEND_PORT` e configure `NODE_ENV=production` + `CORS_ORIGIN`.
+- Frontend: servir imagem Nginx gerada pelo `frontend/Dockerfile`.
+- Opcionalmente, publicar com `docker compose` em um host (Render/Fly.io/EC2/VM).
+
+---
+
 A empresa
 ----------
 
