@@ -9,3 +9,5 @@ coverage/
 Thumbs.db
 .idea/
 .vscode/
+SPECKIT_PROMPTS.md
+specs
