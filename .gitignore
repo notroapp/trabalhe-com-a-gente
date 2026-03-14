@@ -1,5 +1,6 @@
 node_modules/
 dist/
+.cursor/
 build/
 coverage/
 *.log
@@ -11,3 +12,4 @@ Thumbs.db
 .vscode/
 SPECKIT_PROMPTS.md
 specs
+.specify/
